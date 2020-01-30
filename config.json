@@ -1,5 +1,6 @@
 {
-  "batch": 1024,
+  "batch": 128,
+  "priceCount": 120,
   "PricesFiles": "Prices/*.csv",
   "ValidationFile": "Validation/validationResult.csv"
 }
