@@ -12,7 +12,6 @@ def create_resultlist(config):
     return
 
 def calculate_winrate_fromfile(config, validationList, steps, resultlist, prediction_file):
-    resultlist = [] #"Steps","Total","Win","Loss","WinRate"
     with open(prediction_file,"r") as fcsv:
         csvreader = csv.reader(fcsv)
         prices_batch_size = len(validationList)
