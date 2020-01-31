@@ -9,7 +9,7 @@ def create_resultlist(config):
     resultlist.append(0) #2 Win
     resultlist.append(0) #3 Loss
     resultlist.append(0.0) #4 WinRate
-    return
+    return resultlist
 
 def calculate_winrate_fromfile(config, validationList, steps, resultlist, prediction_file):
     with open(prediction_file,"r") as fcsv:
