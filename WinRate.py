@@ -25,4 +25,4 @@ while True:
     print("Start Prediction……")
     resultlist = prediction.calculate_winrate(config, validationList, resultlist, steps)
     results.append(config, resultlist)
-    print("Step " + steps + " Finished.")
+    print("Step " + str(steps) + " Finished.")
