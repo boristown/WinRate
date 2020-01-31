@@ -1,0 +1,2 @@
+python WinRate.py
+pause
