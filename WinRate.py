@@ -17,10 +17,12 @@ print("Create Result File")
 results.create(config)
 
 steps = 0
+resultlist = prediction.create_resultlist(config)
 while True:
     steps += 1
     print("Saving Prices File……")
     validationList = prices.save_prices_file(config, symbol_list)
     print("Start Prediction……")
-    results.append(prediction.calculate_winrate(config, validationList, steps))
+    resultlist = prediction.calculate_winrate(config, validationList, resultlist, steps)
+    results.append(resultlist)
     print("Step " + steps + " Finished.")
