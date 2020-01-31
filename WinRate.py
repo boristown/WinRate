@@ -24,5 +24,5 @@ while True:
     validationList = prices.save_prices_file(config, symbol_list)
     print("Start Prediction……")
     resultlist = prediction.calculate_winrate(config, validationList, resultlist, steps)
-    results.append(resultlist)
+    results.append(config, resultlist)
     print("Step " + steps + " Finished.")
