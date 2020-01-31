@@ -7,6 +7,6 @@ def create(config):
         winrateWriter.writerow(["Steps","Total","Win","Loss","WinRate"])
 
 def append(config, resultline):
-    with open(config["WinRateFile"],"a") as winrateFile:
+    with open(config["WinRateFile"],"a",newline='') as winrateFile:
         winrateWriter = csv.writer(winrateFile)
         winrateWriter.writerow(resultline)

@@ -17,7 +17,7 @@ def calculate_winrate_fromfile(config, validationList, steps, resultlist, predic
         prices_batch_size = len(validationList)
         predict_index = 0
         time.sleep(5)
-        resultlist[0] += steps #0 Steps
+        resultlist[0] += 1 #0 Steps
         resultlist[1] += config["batch"] #1 Total
         for row in csvreader:
             riseflag = 1 if (float)(row[1]) >= 0.5 else 0
@@ -28,7 +28,7 @@ def calculate_winrate_fromfile(config, validationList, steps, resultlist, predic
             predict_index += 1
             if predict_index >= prices_batch_size:
                 break
-        resultlist[4] = resultlist[2] / prices_batch_size #4 WinRate
+        resultlist[4] = resultlist[2] / resultlist[1] #4 WinRate
     return resultlist
 
 def calculate_winrate(config, validationList, resultlist, steps):
