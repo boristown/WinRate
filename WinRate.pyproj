@@ -21,7 +21,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="prediction.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="prices.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="results.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="symbols.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="WinRate.py" />

@@ -1,9 +1,9 @@
 {
   "batch": 128,
   "priceCount": 120,
-  "PricesFiles": "Prices/*.csv",
-  "ValidationFile": "Validation/validationResult.csv",
-  "Output_prices_file": "Output/prices/*.csv",
-  "Output_predict_file": "Output/predict/*.csv",
-  "Output_prices_prefix": "Output/prices/"
+  "SymbolFiles": "Symbols/*.csv",
+  "WinRateFile": "WinRate/WinRate.csv",
+  "PricesDirectory": "Output/prices/",
+  "PricesFiles": "Output/prices/*.csv",
+  "PredictionFiles": "Output/predict/*.csv"
 }
