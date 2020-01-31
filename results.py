@@ -1,7 +1,7 @@
 import csv
 
 def create(config):
-    with open(config["WinRateFile"],"w") as winrateFile:
+    with open(config["WinRateFile"],"w",newline='') as winrateFile:
         winrateWriter = csv.writer(winrateFile)
         #Write Header
         winrateWriter.writerow(["Steps","Total","Win","Loss","WinRate"])

@@ -1,5 +1,5 @@
 {
-  "batch": 256,
+  "batch": 512,
   "priceCount": 120,
   "SymbolFiles": "Symbols/*.csv",
   "WinRateFile": "WinRate/WinRate.csv",
