@@ -9,6 +9,7 @@ def create_resultlist(config):
     resultlist.append(0) #2 Win
     resultlist.append(0) #3 Loss
     resultlist.append(0.0) #4 WinRate
+    resultlist.append(0.0) #5 Score
     return resultlist
 
 def calculate_winrate_fromfile(config, validationList, steps, resultlist, prediction_file):
@@ -28,6 +29,7 @@ def calculate_winrate_fromfile(config, validationList, steps, resultlist, predic
             predict_index += 1
             if predict_index >= prices_batch_size:
                 break
+            resultlist[5] = abs((float)(row[1]) * 2 - 1) * 100.0
         resultlist[4] = resultlist[2] / resultlist[1] #4 WinRate
     return resultlist
 
