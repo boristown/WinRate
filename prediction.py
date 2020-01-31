@@ -32,7 +32,7 @@ def calculate_winrate_fromfile(config, validationList, steps, resultlist, predic
         resultlist[4] = resultlist[2] / prices_batch_size #4 WinRate
     return resultlist
 
-def calculate_winrate(config, validationData, resultlist, steps):
+def calculate_winrate(config, validationList, resultlist, steps):
     # Predict
     while True:
         time.sleep(1)
@@ -41,6 +41,6 @@ def calculate_winrate(config, validationData, resultlist, steps):
             continue
         print("Reading Prediction Result……", predict_files[0])
         time.sleep(2)
-        resultlist = calculate_winrate_fromfile(validationData, steps, resultlist, predict_files[0])
+        resultlist = calculate_winrate_fromfile(config, validationList, steps, resultlist, predict_files[0])
         break
     return resultlist
